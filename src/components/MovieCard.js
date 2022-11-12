@@ -1,11 +1,20 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+
 
 const MovieCard = ({ item }) => {
     const { genreList } = useSelector( (state) => state.movie);
-  return (
+    const navigate = useNavigate();
+
+    const goMovieDetailPage = () => {
+        navigate(`/movies/${item.id}`);
+    };
+
+   return(
     <div
+        onClick={goMovieDetailPage}
         className="card" 
         style={{ 
             backgroundImage: 
@@ -30,7 +39,7 @@ const MovieCard = ({ item }) => {
         </div>
       </div>
     </div>
-  )
+   )
 }
 
 export default MovieCard;

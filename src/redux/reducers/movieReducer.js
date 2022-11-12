@@ -27,7 +27,7 @@ function movieReducer(state = initialState, action) {
             return {
                 ...state,
                 loading: false,
-            }   
+            };
         default:
             return { ...state };
     }
