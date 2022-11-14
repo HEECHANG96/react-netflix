@@ -29,12 +29,13 @@ const MovieCard = ({ item }) => {
         <div>
             {item.genre_ids.map((id) => (
                 <Badge bg="danger">
-                    {genreList.find((item) => item.id==id).name}
+                    {genreList.find((item) => item.id===id).name}
                 </Badge>
             ))}
         </div>
         <div>
-            <span>{item.vote_average}</span>
+            <span>평점 {item.vote_average}</span>
+            <br />
             <span>{item.adult?"청불":"Under 18"}</span>
         </div>
       </div>

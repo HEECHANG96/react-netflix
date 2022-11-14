@@ -4,6 +4,14 @@
 
 .Home {
   background-color: black;
+
+}
+
+.MovieDetail {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content:space-between;
 }
 
 
@@ -63,10 +71,18 @@
 
 /* MoviePoster */
 
-/* .detail {
-  display: flex;
-  justify-content: center;
+.MoviePoster {
+  margin-left: 300px;
+  text-align: center;
 }
-.poster {
-  background: no-repeat;
-} */
+
+.Badge {
+  margin:10px;
+}
+
+.title {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+/* Detail */

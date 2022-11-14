@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import MoviePoster from "../components/MoviePoster";
+import Detail from '../components/Detail';
 import { useDispatch, useSelector } from 'react-redux';
 import { movieAction } from '../redux/actions/movieAction';
 import { useParams } from 'react-router-dom';
@@ -15,8 +16,9 @@ const MovieDetail = () => {
    }, []);
   
   return (
-    <div>
+    <div className='MovieDetail'>
       <MoviePoster detail={movieDetail} />
+      <Detail detail={movieDetail} />
     </div>
   )
 }
